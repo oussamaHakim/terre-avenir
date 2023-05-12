@@ -37,19 +37,11 @@ body {
   font-family: var(--base-font);
 }
 
-.main-nav {
-  position: fixed;
-  z-index: 99;
-  top: 0;
-  width: 100%;
-  padding: 16px;
-  background-color:white;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-}
+
 
 /*image de bg top*/
 
-.bg-top{
+/* .bg-top{
   background-image: url(ressources/hed-top-BG.png);
   background-color:transparent;
   height: 20px;
@@ -66,7 +58,7 @@ body {
 .main-nav a {
   margin: 0 37px;
 
-  /* pour animer la nav bar */
+  // pour animer la nav bar
   padding: 8px;
   color: var(--main-black);
   text-transform: uppercase;
@@ -85,8 +77,71 @@ body {
 
 .main-nav .nav-icon{
   width: 20px;
+} */
+
+/*-------------------------------- mobile first -------------------------------------*/
+.logo-head {
+  display: none;
 }
 
-@media (max-width: 1024px) {
-  
+.main-nav {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  width: 100%;
+
+  display: flex;
+  order: 1;
+
+  padding: 6px;
+  background-color:white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.main-nav a {
+  font-size: var(--fs-14);
+  margin: 0 37px;
+  padding: 6px;
+  color: var(--main-black);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.main-nav ul {
+  padding: 52px 0 20px;
+  display: none;
+  flex-direction: column;
+}
+
+.main-nav ul li {
+  margin: 6px 0;
+}
+
+/* pour la class activ Js */
+
+.main-nav.active ul {
+  display: flex;
+}
+
+.nav-toggler {
+  order: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  align-self: baseline;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-toggler img {
+  width: 20px;
+}
+
+
+
+
+@media screen and (min-with: 600px) {
+  /*le css ici s'applisuera aux écrans de 600px minimum*/
 }
