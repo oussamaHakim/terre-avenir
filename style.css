@@ -37,11 +37,12 @@ body {
   font-family: var(--base-font);
 }
 
-/*====================================== global utility classes ===============================*/
+/*================================ global utility classes =============================*/
 .section-title {
   font-family: var(--title-font);
   font-size: var(--fs-30);
   text-transform: uppercase;
+  margin-top: 8%;
   margin-bottom: 8%;
   text-align: center;
 
@@ -62,7 +63,7 @@ body {
 
 
 
-/*========================================= landing page =====================================*/
+/*=================================== landing page =====================================*/
 
 .main-nav {
   position: fixed;
@@ -152,7 +153,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* align-self: start; baseline */
   background: none;
   border: none;
   cursor: pointer;
@@ -198,7 +198,8 @@ hr {
   font-weight: 400;
 }
 
-.Learn-more {
+.Learn-more, 
+.abonner {
   min-width: 150px;
   padding: 12px 5px;
   border-radius: 5px;
@@ -211,13 +212,14 @@ hr {
   font-weight: 600;
   cursor: pointer;
   text-decoration: none;
-  color: var(--main-white);
+  color: white;
   box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2);;
 
 }
 
 .mediaS {
   margin: 100px auto;
+  padding-bottom: 50px;
 }
 
 .mediaS img {
@@ -233,51 +235,243 @@ hr {
   display: none;
 }
 
-/* ========================== card ========================== */
-
-.laUne {
-
-  margin-top: 10%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
+main {
+  width: 100vw;
 }
 
-.card img {
-  width: 90vw;
+/* ========================== card (grid) ========================== */
+
+.globale-une {
+  margin-top: 45px;
 }
 
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.card,
+.card2, 
+.card3, 
+.card4 {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20%;
+  grid-template-areas: 
+    "cell cell cell cell"
+    "cell2 cell2 cell2 cell2"
+    "cell3 cell3 cell3 cell3";
+
+  justify-content: center;
+  align-content: center;
+  grid-gap: 1rem;
+  margin-bottom: 50px;
 }
 
-.card-txt {
-  width: 70vw;
-  background: rgba(255, 255, 255, 0.8);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  top: -125px;
+.card-img,
+.card-img2, 
+.card-img3, 
+.card-img4 {
+  grid-row: cell-start / cell2-end ;
+  grid-column: cell-start / cell2-end;
+  width: 100%;
+}
+
+.card-txt,
+.card-txt2, 
+.card-txt3, 
+.card-txt4 {
+  grid-row: cell2-start / cell3-end ;
+  grid-column: cell2-start / cell3-end;
+  text-align: center;
+
+  z-index: 1;
+  margin: auto auto 0 auto;
+  padding: var(--fs-16);
+  width: 80%;
+  height: auto;
+
+  background-color: rgba(255, 255, 255, .8);
+  box-shadow: 3px 3px 1px 1px rgba(113, 168, 66, .2);
+}
+
+/**/
+
+/*============================== Nos action section (grid) ==============================*/
+
+.globale-action{
+  margin-top: 70px;
+}
+
+.action-sensibilisation,
+.action-ressources, 
+.ensemble-don, 
+.ensemble-engager {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20%;
+  grid-template-areas:
+    "durable durable durable durable"
+    "labou labou labou labou";
+
+  justify-content: center;
+  align-content: center;
+  grid-gap:1rem;
+}
+
+
+.durable, 
+.don {
+  grid-area: durable;
+  z-index: 1;
+  margin-top: auto;
+  margin-bottom: auto;
+
+  color: var(--main-white);
+  font-size: var(--fs-30);
+}
+
+
+.durable-img, 
+.don-img {
+  grid-area: durable;
+  width: 100%;
+}
+
+
+.labou, 
+.engager {
+  grid-area: labou;
+  z-index: 1;
+
+  margin-top: auto;
+  margin-bottom: auto;
+
+  color: var(--main-white);
+  font-size: var(--fs-30);
+}
+
+.labou-img, 
+.engager-img {
+  grid-area: labou;
+  width: 100%;
+}
+
+/*================================= Section ACTUALITES =================================*/
+
+.actualite {
+  margin-top: 24%;
+  margin-bottom: 24%;
+}
+
+.actualite ul{
+  margin: 70px auto 70px auto;
+  width: 90%;
+  list-style: none;
+}
+
+.actualite ul li{
+  margin-top: 50px;
+}
+
+/***** button actu *****/
+
+.actu-link {
+  text-align: center;
+}
+
+.actu-link a {
+  font-family: var(--title-font);
+  font-size: var(--fs-18);
+  color: darkgreen;
+  background-color: white;
+
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 11px 25px 11px 25px;
+  border: 3px solid var(--dark-green);
+
+  cursor: pointer;
+}
+
+/*================================== ensemble =====================================*/
+.ensemble {
+  margin-bottom: 10%;
+}
+
+.don, 
+.engager {
+  text-decoration: none;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+/*==================================== info =====================================*/
+.info {
+  text-align: center;
+  margin-bottom: 100px;
   padding: 0 1rem 0 1rem;
 }
 
-.section-subtitle {
-  text-align: center;
-  margin: 1.5rem auto 1.5rem auto;
-  
+.info-title{
+  text-decoration: none;
+  margin-bottom: 25px;
 }
 
-.section-paragraphe {
-  text-align: center;
-  margin-bottom: 1rem;
+.abonner {
+  margin-top: 25px;
 }
 
-/*=================================== Nos action section =================================*/
+/*==================================== footer ====================================*/
+footer {
+  padding: 15px;
+  background-image: url(ressources/Mobile/footer.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
+  font-size: var(--fs-14);
+  color: white;
+}
+
+.ta-txt {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+footer > hr {
+  width: 100%;
+  height: 1px;
+  border-top: none;
+}
+
+.maission-footer {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  grid-template-areas: 
+    "part  part2";
+  grid-gap: 1rem;
+
+  margin: 30px auto 30px auto;
+}
+
+.maission-footer img {
+  grid-area: part;
+  width: 100%;
+}
+
+.tiitle-mission-footer {
+  margin-bottom: 5px;
+  text-align: left;
+  font-size: var(--fs-20);
+}
+
+.mention {
+  margin-top: 30px;
+}
+
+.footer-sociale {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.socialFooter {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 
 
 
@@ -318,94 +512,137 @@ hr {
     font-size: var(--fs-18);
   }
 
-  .card img {
-    width: 60vw;
+  main {
+    width: 70vw;
+    margin: 0 auto 0 auto;
   }
 
-  .card-txt {
-    width: 50vw;
-  }
 }
 
-
+/****************************************************************/
 
 @media screen and (min-width: 1024px){
 
   /*le css ici s'applisuera aux écrans de 840px minimum*/
 
-  .nav-toggler {
+    .nav-toggler {
+      display: none;
+    }
+
+    .main-nav ul{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      
+      padding: 0;
+      margin-left: 40px;
+
+    }
+
+    .main-nav a {
+      color: var(--main-black);
+      font-size: var(--fs-16);
+      text-align: center;
+      margin: 0 10px;
+      padding: 5px;
+      
+
+    }
+
+    .main-nav a:hover{
+      text-decoration: underline solid var(--main-green);
+      text-decoration-thickness: 3px;
+      text-underline-offset: 10px;
+    }
+
+  .main-nav .Make-donation::before {
+    content: "";
+    display: inline-block;
+    background: url(ressources/pack/faire-un-don.svg) no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+
+  .landing {
+    min-height: 900px;
+    text-align: left;
+    padding-left: 100px;
+  }
+
+  .main-title {
+    font-size: var(--fs-60);
+    width: 50%;
+  }
+
+  hr {
+    width: 10%;
+  }
+
+  .main-subtitle {
+    margin-left: 0;
+    width: 30%;
+    font-size: var(--fs-20);
+  }
+
+  .mediaS {
     display: none;
   }
 
-  .main-nav ul{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    
-    padding: 0;
-    margin-left: 40px;
-
+  main {
+    width: 70vw;
+    margin: 0 auto 0 auto;
   }
 
-  .main-nav a {
-    color: var(--main-black);
-    font-size: var(--fs-16);
-    text-align: center;
-    margin: 0 10px;
-    padding: 5px;
-    
-
+  .card-txt,
+  .card-txt2, 
+  .card-txt3, 
+  .card-txt4 {
+    height: 200px;
   }
 
-  .main-nav a:hover{
-    text-decoration: underline solid var(--main-green);
+
+  .globale-une {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 
+      "cell  cell2"
+      "cell3 cell4";
+  }
+
+  .globale-action, 
+  .globale-ensemble {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 
+      "cell  cell2";
+  }
+
+  .action-sensibilisation, 
+  .action-ressources, 
+  .ensemble-don, 
+  .ensemble-engager {
+    grid-gap: 0;
+  }
+
+  .ensemble {
+    margin-bottom: 5%;
+  }
+
+
+  .actu-link a:hover {
+    background-color: #72a84254;
+  }  
+
+  .don:hover, 
+  .engager:hover {
+    text-decoration: underline solid var(--dark-green);
     text-decoration-thickness: 3px;
     text-underline-offset: 10px;
+  
   }
-
-.main-nav .Make-donation::before {
-  content: "";
-  display: inline-block;
-  background: url(ressources/pack/faire-un-don.svg) no-repeat;
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
-}
-
-.landing {
-  min-height: 900px;
-  text-align: left;
-  padding-left: 100px;
-}
-
-.main-title {
-  font-size: var(--fs-60);
-  width: 50%;
-}
-
-hr {
-  width: 10%;
-}
-
-.main-subtitle {
-  margin-left: 0;
-  width: 30%;
-  font-size: var(--fs-20);
-}
-
-.mediaS {
-  display: none;
-}
-
-.card img {
-  width: 40vw;
-}
-
-.card-txt {
-  width: 30vw;
-}
-
 
 }
