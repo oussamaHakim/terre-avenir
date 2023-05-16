@@ -416,6 +416,10 @@ main {
 }
 
 /*==================================== footer ====================================*/
+a {
+  text-decoration: none;
+}
+
 footer {
   padding: 15px;
   background-image: url(ressources/Mobile/footer.png);
