@@ -75,7 +75,7 @@ body {
   order: 1;
 
   padding: 6px;
-  background-color:white;
+  background-color: white;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
@@ -112,7 +112,7 @@ body {
   font-weight: 600;
   cursor: pointer;
   text-decoration: none;
-  color: var(--main-white); 
+  color: var(--main-white);
 }
 
 
@@ -135,7 +135,7 @@ body {
   background-size: cover;
 }
 
-.main-nav.active > .nav-toggler > img {
+.main-nav.active>.nav-toggler>img {
   margin-right: auto;
 }
 
@@ -163,7 +163,7 @@ body {
   margin: 50px auto 30px auto;
 }
 
-.landing{
+.landing {
   /* géré le probleme de la hauteur*/
   min-height: 644px;
   padding-top: 200px;
@@ -175,7 +175,7 @@ body {
 }
 
 
-.main-title{
+.main-title {
   font-family: var(--title-font);
   font-size: var(--fs-30);
   color: var(--main-white);
@@ -198,7 +198,7 @@ hr {
   font-weight: 400;
 }
 
-.Learn-more, 
+.Learn-more,
 .abonner {
   min-width: 150px;
   padding: 12px 5px;
@@ -213,7 +213,8 @@ hr {
   cursor: pointer;
   text-decoration: none;
   color: white;
-  box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2);;
+  box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  ;
 
 }
 
@@ -246,12 +247,12 @@ main {
 }
 
 .card,
-.card2, 
-.card3, 
+.card2,
+.card3,
 .card4 {
   display: grid;
   grid-template-columns: 20% 20% 20% 20%;
-  grid-template-areas: 
+  grid-template-areas:
     "cell cell cell cell"
     "cell2 cell2 cell2 cell2"
     "cell3 cell3 cell3 cell3";
@@ -263,19 +264,19 @@ main {
 }
 
 .card-img,
-.card-img2, 
-.card-img3, 
+.card-img2,
+.card-img3,
 .card-img4 {
-  grid-row: cell-start / cell2-end ;
+  grid-row: cell-start / cell2-end;
   grid-column: cell-start / cell2-end;
   width: 100%;
 }
 
 .card-txt,
-.card-txt2, 
-.card-txt3, 
+.card-txt2,
+.card-txt3,
 .card-txt4 {
-  grid-row: cell2-start / cell3-end ;
+  grid-row: cell2-start / cell3-end;
   grid-column: cell2-start / cell3-end;
   text-align: center;
 
@@ -293,13 +294,13 @@ main {
 
 /*============================== Nos action section (grid) ==============================*/
 
-.globale-action{
+.globale-action {
   margin-top: 70px;
 }
 
 .action-sensibilisation,
-.action-ressources, 
-.ensemble-don, 
+.action-ressources,
+.ensemble-don,
 .ensemble-engager {
   display: grid;
   grid-template-columns: 20% 20% 20% 20%;
@@ -309,11 +310,11 @@ main {
 
   justify-content: center;
   align-content: center;
-  grid-gap:1rem;
+  grid-gap: 1rem;
 }
 
 
-.durable, 
+.durable,
 .don {
   grid-area: durable;
   z-index: 1;
@@ -325,14 +326,14 @@ main {
 }
 
 
-.durable-img, 
+.durable-img,
 .don-img {
   grid-area: durable;
   width: 100%;
 }
 
 
-.labou, 
+.labou,
 .engager {
   grid-area: labou;
   z-index: 1;
@@ -344,7 +345,7 @@ main {
   font-size: var(--fs-30);
 }
 
-.labou-img, 
+.labou-img,
 .engager-img {
   grid-area: labou;
   width: 100%;
@@ -357,13 +358,13 @@ main {
   margin-bottom: 24%;
 }
 
-.actualite ul{
+.actualite ul {
   margin: 70px auto 70px auto;
   width: 90%;
   list-style: none;
 }
 
-.actualite ul li{
+.actualite ul li {
   margin-top: 50px;
 }
 
@@ -392,7 +393,7 @@ main {
   margin-bottom: 10%;
 }
 
-.don, 
+.don,
 .engager {
   text-decoration: none;
   font-weight: 800;
@@ -406,7 +407,7 @@ main {
   padding: 0 1rem 0 1rem;
 }
 
-.info-title{
+.info-title {
   text-decoration: none;
   margin-bottom: 25px;
 }
@@ -432,7 +433,7 @@ footer {
   margin-bottom: 30px;
 }
 
-footer > hr {
+footer hr {
   width: 100%;
   height: 1px;
   border-top: none;
@@ -441,7 +442,7 @@ footer > hr {
 .maission-footer {
   display: grid;
   grid-template-columns: 35% 65%;
-  grid-template-areas: 
+  grid-template-areas:
     "part  part2";
   grid-gap: 1rem;
 
@@ -451,6 +452,8 @@ footer > hr {
 .maission-footer img {
   grid-area: part;
   width: 100%;
+
+  align-self: center;
 }
 
 .tiitle-mission-footer {
@@ -461,6 +464,7 @@ footer > hr {
 
 .mention {
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .footer-sociale {
@@ -473,8 +477,21 @@ footer > hr {
   margin-bottom: 30px;
 }
 
+/*==============================================================================*/
 
+@media screen and (min-width: 400px){
+  .footer {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+  }
 
+  .maission-footer {
+    grid-template-columns: 20% 90%;
+  }
+
+ 
+}
 
 
 /*==============================================================================*/
@@ -499,7 +516,7 @@ footer > hr {
     transform: translateX(-50%);
   }
 
-  .push-down img{
+  .push-down img {
     width: 25px;
     pointer-events: none;
   }
@@ -517,45 +534,76 @@ footer > hr {
     margin: 0 auto 0 auto;
   }
 
+  /************* footer *******************/
+
+  .footer {
+    background-image: url(ressources/BG-footer.png);
+    
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .maission-footer {
+    grid-template-columns: 10% 90%;
+  }
+
+  .maission-footer img {
+    width: 100%;
+    justify-self: end;
+  }
+
+  .txt-mission-footer {
+    align-self: center;
+  }
+
+  .footer hr {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
 }
+
 
 /****************************************************************/
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
 
   /*le css ici s'applisuera aux écrans de 840px minimum*/
 
-    .nav-toggler {
-      display: none;
-    }
+  .nav-toggler {
+    display: none;
+  }
 
-    .main-nav ul{
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      
-      padding: 0;
-      margin-left: 40px;
+  .main-nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 
-    }
+    padding: 0;
+    margin-left: 40px;
 
-    .main-nav a {
-      color: var(--main-black);
-      font-size: var(--fs-16);
-      text-align: center;
-      margin: 0 10px;
-      padding: 5px;
-      
+  }
 
-    }
+  .main-nav a {
+    color: var(--main-black);
+    font-size: var(--fs-16);
+    text-align: center;
+    margin: 0 10px;
+    padding: 5px;
 
-    .main-nav a:hover{
-      text-decoration: underline solid var(--main-green);
-      text-decoration-thickness: 3px;
-      text-underline-offset: 10px;
-    }
+
+  }
+
+  .main-nav a:hover {
+    text-decoration: underline solid var(--main-green);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 10px;
+  }
 
   .main-nav .Make-donation::before {
     content: "";
@@ -597,8 +645,8 @@ footer > hr {
   }
 
   .card-txt,
-  .card-txt2, 
-  .card-txt3, 
+  .card-txt2,
+  .card-txt3,
   .card-txt4 {
     height: 200px;
   }
@@ -608,22 +656,22 @@ footer > hr {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
-    grid-template-areas: 
+    grid-template-areas:
       "cell  cell2"
       "cell3 cell4";
   }
 
-  .globale-action, 
+  .globale-action,
   .globale-ensemble {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-areas: 
+    grid-template-areas:
       "cell  cell2";
   }
 
-  .action-sensibilisation, 
-  .action-ressources, 
-  .ensemble-don, 
+  .action-sensibilisation,
+  .action-ressources,
+  .ensemble-don,
   .ensemble-engager {
     grid-gap: 0;
   }
@@ -635,14 +683,46 @@ footer > hr {
 
   .actu-link a:hover {
     background-color: #72a84254;
-  }  
+  }
 
-  .don:hover, 
+  .don:hover,
   .engager:hover {
     text-decoration: underline solid var(--dark-green);
     text-decoration-thickness: 3px;
     text-underline-offset: 10px;
-  
+
   }
 
+  /*============================= footer =================================*/
+  .footer {
+    background-image: url(ressources/BG-footer.png);
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+
+    font-size: var(--fs-16);
+  }
+
+  .maission-footer {
+    grid-template-columns: 10% 90%;
+  }
+
+  .maission-footer img {
+    width: 100%;
+    justify-self: end;
+  }
+
+  .txt-mission-footer {
+    align-self: center;
+  }
+
+  .footer hr {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .socialFooter {
+    display: block;
+  }
 }

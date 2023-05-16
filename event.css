@@ -1,0 +1,33 @@
+.landing-event{
+  /* géré le probleme de la hauteur*/
+  min-height: 400px;
+  padding-top: 0;
+  padding-left: 0;
+  background-image: url(ressources/event.png);
+  background-size: cover;
+  background-position: 10% 10%;
+  position: static;
+}
+
+.presentation-event {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+.title-event {
+  color: var(--main-black);
+  text-decoration: none;
+  font-size: var(--fs-24);
+  margin-bottom: 17px;
+}
+
+.hr-title {
+  margin: 0 auto 30px auto;
+  border: 2px solid var(--dark-green);
+}
+
+.event-a-venir {
+  margin-top: 100px;
+}
