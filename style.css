@@ -320,9 +320,8 @@ main {
   z-index: 1;
   margin-top: auto;
   margin-bottom: auto;
-
+  padding: 0 20px 0 20px;
   color: var(--main-white);
-  font-size: var(--fs-30);
 }
 
 
@@ -340,9 +339,9 @@ main {
 
   margin-top: auto;
   margin-bottom: auto;
+  padding: 0 20px 0 20px;
 
   color: var(--main-white);
-  font-size: var(--fs-30);
 }
 
 .labou-img,
